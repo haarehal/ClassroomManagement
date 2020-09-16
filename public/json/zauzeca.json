@@ -1,0 +1,36 @@
+{
+    "periodicna": [
+        {
+            "dan": 1,
+            "semestar": "zimski",
+            "pocetak": "10:00",
+            "kraj": "12:00",
+            "naziv": "S0",
+            "predavac": "Zeljko Juric"
+        },
+        {
+            "dan": 4,
+            "semestar": "ljetni",
+            "pocetak": "13:00",
+            "kraj": "14:30",
+            "naziv": "2-02",
+            "predavac": "Huse Fatkic"
+        }
+    ],
+    "vanredna": [
+        {
+            "datum": "20.11.2019",
+            "pocetak": "11:00",
+            "kraj": "13:00",
+            "naziv": "VA1",
+            "predavac": "Zikrija Avdagic"
+        },
+        {
+            "datum": "03.06.2019",
+            "pocetak": "15:00",
+            "kraj": "17:00",
+            "naziv": "0-03",
+            "predavac": "Vensada Okanovic"
+        }
+    ]
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+    <link rel="stylesheet" href="../css/rezervacija.css">
+    <link rel="stylesheet" href="../css/stilStranice.css">
+    <title>Rezervacija</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8">
+</head>
+
+<body onload="Kalendar.ucitajStranicu(), Pozivi.ucitajOsobljeAJAX('rezervacija')">
+    <div class="kontejner">
+        <div id="gornjiLijevi"></div>
+        <div id="gornjiDesni"></div>
+
+        <div class="meni">
+            <div class="logo">
+                <img id="logoSlika" src="../images/logo.jpg" alt="Logo...">
+            </div>
+            <ul>
+                <li> <a id="pocetna" href="pocetna.html">POČETNA</a> </li>
+                <li> <a id="sale" href="sale.html">SALE</a> </li>
+                <li> <a id="unos" href="unos.html">UNOS</a> </li>
+                <li> <a id="rezervacija" href="#">REZERVACIJE</a> </li>
+                <li> <a id="osoblje" href="osoblje.html">OSOBLJE</a> </li>
+            </ul>
+        </div>
+
+        <div class="sadrzaj">
+            <div class="sadrzajKontejner" onchange="Pozivi.ucitajZauzecaIzBazeAJAX()">
+                <div id="dropDownSale">
+                    <label for="selectSale">Sala:</label>
+                    <select id="selectSale" name="sale">
+                        <option value="x" selected="true" disabled="disabled"></option>
+                        <option value="0-01">0-01</option>
+                        <option value="0-02">0-02</option>
+                        <option value="0-03">0-03</option>
+                        <option value="0-04">0-04</option>
+                        <option value="0-05">0-05</option>
+                        <option value="0-06">0-06</option>
+                        <option value="0-07">0-07</option>
+                        <option value="0-08">0-08</option>
+                        <option value="0-09">0-09</option>
+                        <option value="1-01">1-01</option>
+                        <option value="1-02">1-02</option>
+                        <option value="1-03">1-03</option>
+                        <option value="1-04">1-04</option>
+                        <option value="1-05">1-05</option>
+                        <option value="1-06">1-06</option>
+                        <option value="1-07">1-07</option>
+                        <option value="1-11">1-11</option>
+                        <option value="1-15">1-15</option>
+                        <option value="2-01">2-01</option>
+                        <option value="2-02">2-02</option>
+                        <option value="2-03">2-03</option>
+                        <option value="2-04">2-04</option>
+                        <option value="2-05">2-05</option>
+                        <option value="2-06">2-06</option>
+                        <option value="2-07">2-07</option>
+                        <option value="2-08">2-08</option>
+                        <option value="2-09">2-09</option>
+                        <option value="3-01">3-01</option>
+                        <option value="3-02">3-02</option>
+                        <option value="3-03">3-03</option>
+                        <option value="3-04">3-04</option>
+                        <option value="3-05">3-05</option>
+                        <option value="3-06">3-06</option>
+                        <option value="3-07">3-07</option>
+                        <option value="3-08">3-08</option>
+                        <option value="3-09">3-09</option>
+                        <option value="VA1">VA1</option>
+                        <option value="VA2">VA2</option>
+                        <option value="MA">MA</option>
+                        <option value="EE1">EE1</option>
+                        <option value="EE2">EE2</option>
+                        <option value="S0">S0</option>
+                    </select>
+                </div>
+
+                <div id="dropDownOsoblje">
+                    <label for="selectOsoblje">Osoblje:</label>
+                    <select id="selectOsoblje" name="osoblje">
+                        <option value="x" selected="true" disabled="disabled"></option>
+                    </select>
+                </div>
+
+                <div id="checkPeriodicnost">
+                    <input id="checkPer" type="checkbox" name="periodicnost" value="periodicna"> <label for="checkPer">Periodična rezervacija</label> <br>
+        
+                </div>
+
+                <div id="timePocetak">
+                    <label for="pocetak">Početak:</label>
+                    <input id="pocetak" type="time">
+                </div>
+
+                <div id="timeKraj">
+                    <label for="kraj">Kraj:</label>
+                    <input id="kraj" type="time">
+                </div>
+
+                <div id="kalendarKontejner">
+                    <div id="kalendar">
+                        <table id="tabelaKalendar" value="">
+                            
+                                <tr id="mjesecRed">
+                                    <th id="mjesec" colspan="7"></th>
+                                </tr>
+                        
+                                <tr id="daniRed">
+                                        <th class="danHeader">PON</th>
+                                        <th class="danHeader">UTO</th>
+                                        <th class="danHeader">SRI</th>
+                                        <th class="danHeader">ČET</th>
+                                        <th class="danHeader">PET</th>
+                                        <th class="danHeader">SUB</th>
+                                        <th class="danHeader">NED</th>
+                                </tr>
+                            
+                            
+                                <tr class="sedmica" id="prvaSedmica">
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                </tr>
+                                <tr class="sedmica" id="drugaSedmica">
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                </tr>
+                                <tr class="sedmica" id="trecaSedmica">
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                </tr>
+                                <tr class="sedmica" id="cetvrtaSedmica">
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                </tr>
+                                <tr class="sedmica" id="petaSedmica">
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                </tr>
+                                <tr class="sedmica" id="sestaSedmica">
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                    <td class="dan slobodna" onclick="window.parent.potvrdiRezervaciju(this.innerHTML)">x</td>
+                                </tr>
+                            
+                        </table>
+                    </div>
+
+                    <div id="dugmad">
+                        <button id="dugmePrethodni" type="button" onclick="Kalendar.iscrtajKalendar(document.getElementById('tabelaKalendar'),
+                                parseInt(document.getElementById('tabelaKalendar').value),this.id); Kalendar.obojiZauzeca(document.getElementById('tabelaKalendar'),
+                                                                    Kalendar.pretvoriMjesecStringURedni(document.getElementById('mjesec').innerHTML),
+                                                                    document.getElementById('selectSale').value,
+                                                                    document.getElementById('pocetak').value,
+                                                                    document.getElementById('kraj').value)">PRETHODNI</button>
+                        <button id="dugmeSljedeci" type="button" onclick="Kalendar.iscrtajKalendar(document.getElementById('tabelaKalendar'),
+                                parseInt(document.getElementById('tabelaKalendar').value),this.id); Kalendar.obojiZauzeca(document.getElementById('tabelaKalendar'),
+                                                                    Kalendar.pretvoriMjesecStringURedni(document.getElementById('mjesec').innerHTML),
+                                                                    document.getElementById('selectSale').value,
+                                                                    document.getElementById('pocetak').value,
+                                                                    document.getElementById('kraj').value)">SLJEDEĆI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../javascript/rezervacija.js"></script>
+    <script type="text/javascript" src="../javascript/kalendar.js"></script>
+    <script type="text/javascript" src="../javascript/pozivi.js"></script>
+</body>
+
+</html>

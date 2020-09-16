@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/unos.css">
+    <link rel="stylesheet" href="../css/stilStranice.css">
+    <title>Unos</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8">
+</head>
+
+<body>
+    <div class="kontejner">
+        <div id="gornjiLijevi"></div>
+        <div id="gornjiDesni"></div>
+
+        <div class="meni">
+            <div class="logo">
+                <img id="logoSlika" src="../images/logo.jpg" alt="Logo...">
+            </div>
+            <ul>
+                <li> <a id="pocetna" href="pocetna.html">POČETNA</a> </li>
+                <li> <a id="sale" href="sale.html">SALE</a> </li>
+                <li> <a id="unos" href="#">UNOS</a> </li>
+                <li> <a id="rezervacija" href="rezervacija.html" onclick="Pozivi.ucitajPodatkeAJAX()">REZERVACIJE</a> </li>
+                <li> <a id="osoblje" href="osoblje.html">OSOBLJE</a> </li>
+            </ul>
+        </div>
+
+        <div class="sadrzaj">
+            <form>
+                <label for="naziv">Naziv:</label>
+                <input class="ipt" id="naziv" type="text" placeholder="Unesite naziv..."> <br><br>
+
+                <label for="brojMjesta">Broj mjesta:</label>
+                <input class="ipt" id="brojMjesta" type="number" placeholder="Unesite broj mijesta..."> <br><br>
+
+                <label for="email">Odgovorna osoba:</label>
+                <input class="ipt" id="email" type="email" placeholder="Unesite vaš email..."> <br><br>
+
+                <label for="sprat">Sprat:</label>
+                <input class="ipt" id="sprat" type="text" placeholder="Unesite sprat..."> <br><br><br><br>
+
+                <!-- <label for="dugme"></label> -->
+                <input id="dugme" type="submit" value="UNESI">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

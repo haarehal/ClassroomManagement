@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/sale.css">
+    <link rel="stylesheet" href="../css/stilStranice.css">
+    <title>Sale</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8">
+</head>
+
+<body>
+    <div class="kontejner">
+        <div id="gornjiLijevi"></div>
+        <div id="gornjiDesni"></div>
+
+        <div class="meni">
+            <div class="logo">
+                <img id="logoSlika" src="../images/logo.jpg" alt="Logo...">
+            </div>
+            <ul>
+                <li> <a id="pocetna" href="pocetna.html">POČETNA</a> </li>
+                <li> <a id="sale" href="#">SALE</a> </li>
+                <li> <a id="unos" href="unos.html">UNOS</a> </li>
+                <li> <a id="rezervacija" href="rezervacija.html" onclick="Pozivi.ucitajPodatkeAJAX()">REZERVACIJE</a> </li>
+                <li> <a id="osoblje" href="osoblje.html">OSOBLJE</a> </li>
+            </ul>
+        </div>
+
+        <div class="sadrzaj">
+            <table class="tabelaSala">
+                <thead>
+                    <tr>
+                        <th class="praznaCelija"></th>
+                        <th class="headerSprat" colspan="5">Spratovi</th>
+                    </tr>
+                    <tr>
+                        <th id="redniBroj" class="headerRedni">Redni broj</th>
+                        <th class="headerSprat">0.</th>
+                        <th class="headerSprat">1.</th>
+                        <th class="headerSprat">2.</th>
+                        <th class="headerSprat">3.</th>
+                        <th class="headerSprat">Van</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th class="headerRedni">1.</th>
+                    <td class="sala">0-01</td>
+                    <td class="sala">1-01</td>
+                    <td class="sala">2-01</td>
+                    <td class="sala">3-01</td>
+                    <td class="sala slobodnaSala">VA1</td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">2.</th>
+                    <td class="sala">0-02</td>
+                    <td class="sala">1-02</td>
+                    <td class="sala">2-02</td>
+                    <td class="sala">3-02</td>
+                    <td class="sala zauzetaSala">VA2</td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">3.</th>
+                    <td class="sala">0-03</td>
+                    <td class="sala">1-03</td>
+                    <td class="sala">2-03</td>
+                    <td class="sala">3-03</td>
+                    <td class="sala">MA</td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">4.</th>
+                    <td class="sala">0-04</td>
+                    <td class="sala">1-04</td>
+                    <td class="sala">2-04</td>
+                    <td class="sala">3-04</td>
+                    <td class="sala">EE1</td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">5.</th>
+                    <td class="sala">0-05</td>
+                    <td class="sala">1-05</td>
+                    <td class="sala">2-05</td>
+                    <td class="sala">3-05</td>
+                    <td class="sala">EE2</td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">6.</th>
+                    <td class="sala">0-06</td>
+                    <td class="sala">1-06</td>
+                    <td class="sala">2-06</td>
+                    <td class="sala">3-06</td>
+                    <td class="sala">S0</td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">7.</th>
+                    <td class="sala">0-07</td>
+                    <td class="sala">1-07</td>
+                    <td class="sala">2-07</td>
+                    <td class="sala">3-07</td>
+                    <td class="sala praznaCelija"></td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">8.</th>
+                    <td class="sala">0-08</td>
+                    <td class="sala kancelarija">1-08</td>
+                    <td class="sala">2-08</td>
+                    <td class="sala">3-08</td>
+                    <td class="sala praznaCelija"></td>
+                </tr>
+                <tr>
+                    <th class="headerRedni">9.</th>
+                    <td class="sala">0-09</td>
+                    <td class="sala">1-09</td>
+                    <td class="sala">2-09</td>
+                    <td class="sala">3-09</td>
+                    <td class="sala praznaCelija"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

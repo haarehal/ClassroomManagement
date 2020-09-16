@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/osoblje.css">
+    <link rel="stylesheet" href="../css/stilStranice.css">
+    <title>Osoblje</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8">
+</head>
+
+<body onload="Pozivi.ucitajOsobljeAJAX('osoblje')">
+    <div class="kontejner">
+        <div id="gornjiLijevi"></div>
+        <div id="gornjiDesni"></div>
+
+        <div class="meni">
+            <div class="logo">
+                <img id="logoSlika" src="../images/logo.jpg" alt="Logo...">
+            </div>
+            <ul>
+                <li> <a id="pocetna" href="pocetna.html">POČETNA</a> </li>
+                <li> <a id="sale" href="sale.html">SALE</a> </li>
+                <li> <a id="unos" href="#">UNOS</a> </li>
+                <li> <a id="rezervacija" href="rezervacija.html" onclick="Pozivi.ucitajPodatkeAJAX()">REZERVACIJE</a> </li>
+                <li> <a id="osoblje" href="#">OSOBLJE</a> </li>
+            </ul>
+        </div>
+
+        <div class="sadrzaj">
+            <!-- <table class="tabelaOsoblja">
+                <thead>
+                    <tr>
+                        <th class="header">OSOBA</th>
+                        <th class="header">SALA</th>
+                    </tr>
+                </thead>
+            </table> -->
+            <ul id="lista"> </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../javascript/osoblje.js"></script>
+    <script type="text/javascript" src="../javascript/pozivi.js"></script>
+</body>
+
+</html>

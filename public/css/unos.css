@@ -1,0 +1,104 @@
+a:not(#unos) {
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: grey;
+}
+
+a:not(#unos):hover {
+    color: grey;
+}
+
+#unos:any-link {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+
+form {
+    width: 70%;
+    height: fit-content;
+    margin: auto;
+    padding: 5%;
+    background-color: rgb(116, 114, 114);
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+label {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    margin: auto;
+    font-size: 1.5vw;
+    margin-right: 3%;
+    font-weight: bold;
+}
+
+.ipt {
+    display: inline-block;
+    width: 30%;
+    font-size: 1.5vw;
+    margin: auto;
+    border: 2px solid black;
+    text-align: center;
+    color: #494949 !important;
+    padding: 0.2em;
+}
+
+.ipt:hover {
+    color: white !important;
+    background: black;
+    border-color: white !important;
+    transition: all 0.4s ease 0s;
+    width: 50%;
+    content: hidden;
+}
+
+.ipt::placeholder {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.2vw;
+}
+
+.ipt:hover::placeholder {
+    visibility: hidden;
+}
+
+#dugme {
+    position: relative;
+    left: 80%;
+    width: 20%;
+    font-size: 1.5vw;
+    border: none;
+    background: black;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 2%;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+}
+
+#dugme:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.3s ease 0s;
+}
+
+@media screen and (max-width: 600px) {
+    label {
+        margin-left: 30%;
+        text-align: center;
+    }
+
+    .ipt {
+        display: flex;
+    }
+
+    .ipt:hover {
+        width: 60%;
+    }
+}

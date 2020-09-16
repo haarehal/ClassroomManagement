@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/pocetna.css">
+    <!-- <link rel="stylesheet" href="../css/stilStranice.css"> -->
+    <title>Početna</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8">
+</head>
+
+<body>
+    <div class="kontejner">
+        <div id="gornjiLijevi"></div>
+        <div id="gornjiDesni"></div>
+
+        <div class="meni">
+            <div class="logo">
+                <img id="logoSlika" src="../images/logo.jpg" alt="Logo...">
+            </div>
+            <ul>
+                <li> <a id="pocetna" href="#">POČETNA</a> </li>
+                <li> <a id="sale" href="sale.html">SALE</a> </li>
+                <li> <a id="unos" href="unos.html">UNOS</a> </li>
+                <li> <a id="rezervacija" href="rezervacija.html" onclick="Pozivi.ucitajPodatkeAJAX()">REZERVACIJE</a>
+                </li>
+                <li> <a id="osoblje" href="osoblje.html">OSOBLJE</a> </li>
+            </ul>
+        </div>
+
+        <div class="sadrzaj">
+            <div class="kontejnerSadrzaj">
+                <div id="slike">
+                    <div> <img id="prvaSlika" alt="Slika..." draggable="false"> </div>
+                    <div> <img id="drugaSlika" alt="Slika..." draggable="false"> </div>
+                    <div> <img id="trecaSlika" alt="Slika..." draggable="false"> </div>
+                </div>
+                <div id="lijevoDugme"> <button id="dugmePrethodni" type="button" onclick="window.parent.klikPrethodni()">PRETHODNI</button> </div>
+                <div id="desnoDugme"> <button id="dugmeSljedeci" type="button" onclick="window.parent.klikSljedeci()">SLJEDEĆI</button> </div>
+            </div>
+        </div>
+        <span id="informacije">
+            <span id="opisBrojPosjetioca"> Ukupan broj posjetioca:</span>
+            <span id="brojPosjetioca">x</span>
+            <span id="opisChrome">Broj posjetioca sa Google Chrome-a:</span>
+            <span id="chrome">x</span>
+            <span id="opisFirefox">Broj posjetioca sa Mozille Firefox:</span>
+            <span id="firefox">x</span>
+    </div>
+    </div>
+
+    <script src="../javascript/pocetna.js"></script>
+    <script src="../javascript/pozivi.js"></script>
+</body>
+
+</html>

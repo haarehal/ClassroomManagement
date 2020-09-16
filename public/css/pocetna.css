@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: url("../images/pozadina.png");
+    min-width: 250px;
+    background-attachment: fixed;
+}
+
+.kontejner {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-row-gap: 2%;
+    grid-column-gap: 0.5%;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: fit-content;
+}
+
+#gornjiLijevi {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url("../images/dekoracija.png");
+    border: 1px solid white;
+    padding: 2%;
+    margin-right: 15%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#gornjiDesni {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url("../images/dekoracija.png");
+    border: 1px solid white;
+    margin-left: 15%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.meni {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url("../images/meni_pozadina.jpg");
+    border: 1px solid white;
+    background-color: black;
+    font-size: 1.5vw;
+    border-radius: 25px;
+}
+
+.meni ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style-type: none;
+    text-align: center;
+}
+
+.logo {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+    height: 8%;
+    margin-top: -4%;
+}
+
+#logoSlika {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.sadrzaj {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    height: 100vh;
+    background-color: #222;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.sadrzaj > div {
+    margin: auto;
+    overflow: hidden;
+}
+
+a:not(#pocetna) {
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: grey;
+}
+
+a:not(#pocetna):hover {
+    color: grey;
+}
+
+#pocetna:any-link {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+
+.kontejnerSadrzaj {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slike {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 3%;
+    margin: auto;
+    height: 100%;
+    padding: 3%;
+    grid-gap: 5%;
+}
+
+#slike > div {
+    position: relative;
+    float: left;
+    width:  40vh;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    visibility: visible;
+}
+
+/* #dugmad {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 0;
+} */
+
+button {
+    font-size: 1.5vw;
+    border: none;
+    background: black;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 2%;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    height: 100%;
+}
+
+button:hover, button:disabled {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    transition: all 0.3s ease 0s;
+}
+
+#lijevoDugme {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#desnoDugme {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#lijevoDugme, #desnoDugme {
+    height: 100vh;
+    width: 50%;
+}
+
+#dugmePrethodni:active, #dugmeSljedeci:active {
+    background-color: black;
+    color: white;
+}
+
+#dugmePrethodni:disabled, #dugmeSljedeci:disabled {
+    cursor: not-allowed;
+}
+
+#informacije {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #222;
+    border: 1px solid white;
+    text-align:center;
+    margin-bottom: 0;
+    padding: 1%;
+}
+
+#informacije > span {
+    font-size: 1.3em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#opisBrojPosjetioca, #opisChrome, #opisFirefox {
+    margin-right: 3%;
+}
+
+#brojPosjetioca, #chrome, #firefox {
+    margin-right: 2%;
+}
+
+@media screen and (max-width: 900px) {
+    .kontejnerSadrzaj {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .kontejnerSadrzaj > div {
+        width: 30%;
+        height: 100%;
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .kontejnerSadrzaj {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+    .kontejnerSadrzaj > div {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .meni ul { 
+        display: inline;
+        padding: 1%;
+    }
+
+    ul > li {
+        padding: 1%;
+    }
+
+    .sadrzaj {
+        height: 100%;
+    }
+
+    .kontejnerSadrzaj {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        display: block;
+        height: 100%;
+    }
+
+    .kontejnerSadrzaj > div {
+        width: 240px;  /* 0.8 * 300px = 240px  */
+        height: 242.4px; /* 0.8 * 303px = 242.4px */
+        margin-top: 5%;
+    }
+}
